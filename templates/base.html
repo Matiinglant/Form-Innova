@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Formulario de Registros{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Programa Internacional INNOVA LAC</h1>
+        <nav>
+            <!-- Aquí puedes agregar enlaces de navegación si lo deseas -->
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {% now "Y" %} CottonSP    </p>
+    </footer>
+</body>
+</html>

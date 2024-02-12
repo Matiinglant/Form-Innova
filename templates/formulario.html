@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %}Formulario de Registro{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Formulario de Registro</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </div>
+{% endblock %}
