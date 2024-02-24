@@ -1,0 +1,22 @@
+# Archivos generados por Python
+*.pyc
+__pycache__
+
+# Directorio de entorno virtual
+entorno/
+
+# Archivos de configuración locales
+*.sqlite3
+*.pyc
+*.log
+
+# Archivos de configuración específicos del IDE (ejemplo: Visual Studio Code)
+.vscode/
+
+# Dependencias de Python (puede variar según el gestor de paquetes utilizado)
+# Si usas pipenv:
+Pipfile
+Pipfile.lock
+
+# Si usas pip:
+requirements.txt
