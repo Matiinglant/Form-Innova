@@ -1,16 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load widget_tweaks %}
+{% load crispy_forms_filters %} 
+{% load crispy_forms_tags %}
 {% block title %}Formulario de Registro{% endblock %}
 
-{% block content %}
+
+{%  block content %}
+
+   <!-- About Start -->
+   <div class="container-xxl py-5">
     <div class="container">
-        <h2>Formulario de Registro</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            
-            <button type="submit" class="btn-submit">Enviar</button>
-        </form>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-80 h-80" src="{% static '\img\formulario.jpg' %}"   alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start  pe-3">Innova</h6>
+                <h1 class="mb-4"> <h2>Formulario de Registro</h2></h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Certificado de Idiomas</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Certificados de Progamacion</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Experiencias laborales</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                    </div>
+                </div>
+               <button type="submit" class="btn btn-primary py-3 px-5 mt-2">Enviar</button>
+            </form>
+            </div>
+        </div>
     </div>
+</div>
+<!-- About End -->
+
 {% endblock %}
